@@ -11,14 +11,27 @@ export class ShoppingCartComponent implements OnInit {
 
   }
 
-  ngOnInit() {
+  ngOnInit() : void {
+    const products = [{
+      name: 'Sailboat',
+      Qty:1,
+      price:24.95,
+      status:'In-stock'
+    },{
+      name: 'Scrabble',
+      Qty:1,
+      price:19.95,
+      status:'In-stock'
+    }];
     this.subTotal = this.calculateSubtotal(products);
   }
 
   calculateSubtotal(products) : number {
+    let total = 0
     for(let i = 0 ; i < products.length ;i++){
-      this.subTotal+= products[i].price;
+      total += products[i].price;
     }
+    return total;
   }
 
 }
