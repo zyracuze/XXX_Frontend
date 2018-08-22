@@ -6,14 +6,18 @@
     <th>Price (THB)</th>
   </tr>
   <tr *ngFor="let product of products">
-    <td>{product.name} {product.brand} {product.gender} {product.age} {product.status} DELETE</td>
-    <td>product.quantity</td>
-    <td>product.price</td>
+    <td><p>{{product.name}} by {{product.brand}}</p>
+       <p>{{product.gender}} {{product.age}}</p>
+       <p> {{product.status}} </p>
+       <a>DELETE</a></td>
+    <td style="text-align: center">{{product.quantity}}</td>
+    <td style="text-align: center">{{product.price}}</td>
   </tr>
 </table>
 <p>Shipping Method: Kerry Express</p>
 <p>Shipping Fee: 150 THB</p>
-<p>Subtotal : <span>{products.length} THB</span></p>
+<p>Subtotal ({{products.length}} items): <span> {{subTotal}} THB</span></p>
 <p>Shipping Fee : 150 THB</p>
-<button>Go Back to Shopping</button>
-<button>Process to Checkout</button>
+<a href='/details/1'>Go Back to Shopping</a>
+<p></p>
+<a href='/address/'>Process to Checkout</a>

@@ -19,7 +19,7 @@ describe('CartService', () => {
       brand: 'CoolkidZ',
       gender:'Male',
       age:'over8',
-      Qty:1,
+      quantity:1,
       price:24.95,
       status:'In-stock'
     };
@@ -34,7 +34,7 @@ describe('CartService', () => {
       brand: 'CoolkidZ',
       gender:'Male',
       age:'over8',
-      Qty:1,
+      quantity:1,
       price:24.95,
       status:'In-stock'
     };

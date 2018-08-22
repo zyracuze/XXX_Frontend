@@ -26,18 +26,18 @@ describe('ShoppingCartComponent', () => {
   it('should Total is equals to sum of products price.',() => {
     const mockInput = [{
       name: 'Sailboat',
-      Qty:1,
+      quantity:1,
       price:24.95,
       status:'In-stock'
     },{
       name: 'Scrabble',
-      Qty:1,
+      quantity:1,
       price:19.95,
       status:'In-stock'
     }];
 
-
-
+    component.ngOnInit();
+    
     expect(component.subTotal).toBe(24.95+19.95);
 
     // const expectedOutput = {
